@@ -431,11 +431,13 @@ function socialbase_form_node_form_alter(&$form, FormStateInterface $form_state,
 }
 
 /**
- * Implements hook_form_search_content_form_alter().
+ * Implements hook_form_BASE_ID_alter().
+ *
+ * Add svg icon for search button.
  */
 function socialbase_form_search_content_form_alter(&$form) {
   $form['actions']['submit']['#icon'] = [
-    '#type' => "inline_template",
-    '#template' => '<svg class="icon--search"><use xlink:href="#icon-search"></use></svg>'
+    '#type' => 'inline_template',
+    '#template' => '<svg class="icon--search"><use xlink:href="#icon-search"></use></svg>',
   ];
 }
