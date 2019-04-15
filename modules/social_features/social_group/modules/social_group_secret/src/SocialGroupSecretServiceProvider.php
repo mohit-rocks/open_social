@@ -10,6 +10,9 @@ use Symfony\Component\DependencyInjection\Reference;
 /**
  * Class SocialGroupSecretServiceProvider.
  *
+ * Turn off redirecting to the login page from the secret group page when the
+ * user does not have access to the group.
+ *
  * @package Drupal\social_group_secret
  */
 class SocialGroupSecretServiceProvider extends ServiceProviderBase {

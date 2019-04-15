@@ -85,6 +85,7 @@ class SocialGroupSecretSubscriber extends R4032LoginSubscriber {
   public function on403(GetResponseEvent $event) {
     $group = $this->routeMatch->getParameter('group');
 
+    // Show 404 page instead of 403 page for secret groups.
     if ($group && $group instanceof GroupInterface && $group->bundle() === 'secret_group') {
       $config = $this->configFactory->get('system.site');
 
