@@ -45,9 +45,6 @@ class SocialUserPasswordForm extends UserPasswordForm {
 
       $form['forgot']['sign-up-link'] = [
         '#markup' => $this->t("Don't have an account yet? @link", ["@link" => $sign_up_link]),
-        '#cache' => [
-          'max-age' => 0,
-        ],
       ];
     }
     return $form;

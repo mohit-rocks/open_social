@@ -91,7 +91,7 @@ class SocialUserLoginForm extends UserLoginForm {
         '#markup' => $this->t("Don't have an account yet? @link", ["@link" => $sign_up_link]),
         '#weight' => 1000,
         '#cache' => [
-          'max-age' => 0,
+          'contexts' => ['url.query_args'],
         ],
       ];
     }
